@@ -12,3 +12,28 @@ class Library:
             "author": author,
             "status": "Available"
         }
+
+    def borrow_book(self, book_id):
+        if book_id not in self.books:
+            raise ValueError("Book not found")
+
+        if self.books[book_id]["status"] == "Borrowed":
+            raise ValueError("Book already borrowed")
+
+        self.books[book_id]["status"] = "Borrowed"
+
+    def return_book(self, book_id):
+        if book_id not in self.books:
+            raise ValueError("Book not found")
+
+        self.books[book_id]["status"] = "Available"
+
+    def generate_report(self):
+        report = []
+        report.append("BookID | Title | Author | Status")
+
+        for book_id, data in self.books.items():
+            line = f"{book_id} | {data['title']} | {data['author']} | {data['status']}"
+            report.append(line)
+
+        return report
