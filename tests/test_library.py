@@ -2,10 +2,6 @@ import unittest
 from src.library import Library
 
 
-# ---------------------------
-# Sprint 1 Tests
-# ---------------------------
-
 class TestLibrarySprint1(unittest.TestCase):
 
     def setUp(self):
@@ -21,10 +17,6 @@ class TestLibrarySprint1(unittest.TestCase):
             self.library.add_book("101", "Java", "James")
 
 
-# ---------------------------
-# Sprint 2 Tests
-# ---------------------------
-
 class TestLibrarySprint2(unittest.TestCase):
 
     def setUp(self):
@@ -33,10 +25,7 @@ class TestLibrarySprint2(unittest.TestCase):
 
     def test_borrow_book(self):
         self.library.borrow_book("101")
-        self.assertEqual(
-            self.library.books["101"]["status"],
-            "Borrowed"
-        )
+        self.assertEqual(self.library.books["101"]["status"], "Borrowed")
 
     def test_borrow_unavailable_book(self):
         self.library.borrow_book("101")
@@ -46,15 +35,8 @@ class TestLibrarySprint2(unittest.TestCase):
     def test_return_book(self):
         self.library.borrow_book("101")
         self.library.return_book("101")
-        self.assertEqual(
-            self.library.books["101"]["status"],
-            "Available"
-        )
+        self.assertEqual(self.library.books["101"]["status"], "Available")
 
-
-# ---------------------------
-# Sprint 3 Tests
-# ---------------------------
 
 class TestLibrarySprint3(unittest.TestCase):
 
