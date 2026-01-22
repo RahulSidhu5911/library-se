@@ -1,9 +1,11 @@
 Library Management System – Software Engineering Assignment
 
+
 This project is developed as part of the Software Engineering course assignment.
 It demonstrates Agile sprint-based development, Git version control, unit testing, and traceability practices.
 
 Project Overview
+
 
 The Library Management System supports basic library operations including:
 
@@ -53,10 +55,12 @@ library-se/
 ├── .gitignore
 └── README.md
 
-Running Unit Tests
+Running Unit Tests:
+
 python -m unittest discover -s tests -p "test_*.py" -v
 
-Version Tags
+Version Tags:
+
 
 v0.1 – Sprint 1: Book registration
 
@@ -64,7 +68,8 @@ v0.2 – Sprint 2: Borrow and return functionality
 
 v0.3 – Sprint 3: Library report and final version
 
-Technologies Used
+Technologies Used:
+
 
 Python
 
@@ -72,10 +77,10 @@ Git and GitHub
 
 unittest testing framework
 
+
 Author
 
 Rahul Sidhu
 
-Display book details and availability status
 
-Final testing and documentation
+
